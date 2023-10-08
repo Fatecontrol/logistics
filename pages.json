@@ -1,0 +1,69 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+            "path" : "pages/test/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "任务",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mess/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/mine/index",
+            "style" :                                                                                    
+            {
+							"navigationBarBackgroundColor": "#EF4F3F",
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false,
+								"disableScroll": true
+            }
+            
+        },
+				{
+					"path": "pages/login/index",
+					"style": {
+						"navigationBarTitleText": "登录"
+					}
+				}
+    ],
+	"tabBar": {
+		"selectedColor": "#EF4F3F",
+		"list": [
+			{
+				"pagePath": "pages/test/index",
+				"text": "任务",
+				"iconPath": "static/tabbar/btn_mess_nor.png",
+				"selectedIconPath": "static/tabbar/btn_test_sel.png"
+			},
+			{
+				"pagePath": "pages/mess/index",
+				"text": "消息",
+				"iconPath": "static/tabbar/btn_mess_nor.png",
+				"selectedIconPath": "static/tabbar/btn_mess_sel.png"
+			},
+			{
+				"pagePath": "pages/mine/index",
+				"text": "我的",
+				"iconPath": "static/tabbar/btn_mine_nor.png",
+				"selectedIconPath": "static/tabbar/btn_mine_sel.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "神领物流",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

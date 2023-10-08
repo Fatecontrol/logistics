@@ -1,0 +1,1 @@
+<view class="content"><view class="text-area"><uni-countdown wx:if="{{a}}" u-i="3e31bc04-0" bind:__l="__l" u-p="{{a}}"></uni-countdown><uni-countdown wx:if="{{b}}" u-i="3e31bc04-1" bind:__l="__l" u-p="{{b}}"></uni-countdown><button bindtap="{{d}}">{{c}}</button> 登录 </view></view>

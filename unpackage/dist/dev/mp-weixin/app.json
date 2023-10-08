@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/test/index",
+    "pages/mess/index",
+    "pages/mine/index",
+    "pages/login/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "神领物流",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#EF4F3F",
+    "list": [
+      {
+        "pagePath": "pages/test/index",
+        "text": "任务",
+        "iconPath": "static/tabbar/btn_mess_nor.png",
+        "selectedIconPath": "static/tabbar/btn_test_sel.png"
+      },
+      {
+        "pagePath": "pages/mess/index",
+        "text": "消息",
+        "iconPath": "static/tabbar/btn_mess_nor.png",
+        "selectedIconPath": "static/tabbar/btn_mess_sel.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/btn_mine_nor.png",
+        "selectedIconPath": "static/tabbar/btn_mine_sel.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

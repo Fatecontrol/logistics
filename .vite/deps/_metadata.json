@@ -1,0 +1,23 @@
+{
+  "hash": "b021aa71",
+  "browserHash": "d3532eac",
+  "optimized": {
+    "pinia-plugin-persistedstate": {
+      "src": "../../node_modules/.pnpm/registry.npmmirror.com+pinia-plugin-persistedstate@3.2.0_pinia@2.1.6/node_modules/pinia-plugin-persistedstate/dist/index.mjs",
+      "file": "pinia-plugin-persistedstate.js",
+      "fileHash": "a5efa134",
+      "needsInterop": false
+    },
+    "uni-app-fetch": {
+      "src": "../../node_modules/.pnpm/registry.npmmirror.com+uni-app-fetch@0.0.3/node_modules/uni-app-fetch/dist/index.js",
+      "file": "uni-app-fetch.js",
+      "fileHash": "c359f2cf",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-RSJERJUL": {
+      "file": "chunk-RSJERJUL.js"
+    }
+  }
+}
