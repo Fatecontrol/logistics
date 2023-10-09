@@ -8,6 +8,9 @@ dependencies:
   init:
     specifier: ^0.1.2
     version: registry.npmmirror.com/init@0.1.2
+  js-base64:
+    specifier: ^3.7.5
+    version: registry.npmmirror.com/js-base64@3.7.5
   pinia:
     specifier: ^2.1.6
     version: registry.npmmirror.com/pinia@2.1.6(vue@3.3.4)
@@ -197,6 +200,12 @@ packages:
     engines: {node: '>=0.4.7'}
     dependencies:
       daemon: registry.npmmirror.com/daemon@1.1.0
+    dev: false
+
+  registry.npmmirror.com/js-base64@3.7.5:
+    resolution: {integrity: sha512-3MEt5DTINKqfScXKfJFrRbxkrnk2AxPWGBL/ycjz4dK8iqiSJ06UxD8jh8xuh6p10TX4t2+7FsBYVxxQbMg+qA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/js-base64/-/js-base64-3.7.5.tgz}
+    name: js-base64
+    version: 3.7.5
     dev: false
 
   registry.npmmirror.com/magic-string@0.30.4:

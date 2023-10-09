@@ -3,16 +3,16 @@
 		<view class="mine">
 			<view class="header">
 				<view class="avatar">
-					<image src="../../static/avatar.png" mode=""></image>
+					<image :src="userInfo.avatar" mode=""></image>
 				</view>
 				<view class="name">
-						<text>李明</text>
+						<text>{{userInfo.name}}</text>
 				</view>
 				<view class="numbering">
-					司机编号：67409881
+					司机编号：{{userInfo.number}}
 				</view>
 				<view class="numbering">
-					手机号：177 9998 8765
+					手机号：{{userInfo.phone}}
 				</view>
 			</view>
 			<view class="nav">
@@ -21,54 +21,63 @@
 					</view>
 					<view class="list">
 						<view class="item">
-							<view class="count">18</view>
+							<view class="count">{{taskInfo.taskAmounts}}</view>
 							<view class="name">任务总量</view>
 					</view>
 					<view class="item">
-							<view class="count">16</view>
+							<view class="count">{{taskInfo.completedAmounts}}</view>
 							<view class="name">完成任务量</view>
 					</view>
 					<view class="item">
-							<view class="count">3987</view>
+							<view class="count">{{taskInfo.transportMileage}}</view>
 							<view class="name">运输里程(km)</view>
 					</view>
 					</view>
 					
 			</view>
 			<view class="content">
-				<div class="item">
-					<text>车辆信息</text>
-					<image src="../../static/btn_more.png" mode=""></image>
-				</div>
-				<div class="item">
-					<text>任务数据</text>
-					<image src="../../static/btn_more.png" mode=""></image>
-				</div>
-				<div class="item">
-					<text>系统设置</text>
-					<image src="../../static/btn_more.png" mode=""></image>
-				</div>
+				<UniCell title="车辆信息" url="/subpkg_user/truck/index"/>
+				<UniCell title="任务数据"></UniCell>
+				<UniCell title="系统设置" url="/subpkg_user/settings/index"/>
 			</view>
 		</view>
 		
 </template>
 
-<script setup></script>
+<script setup>
+	import {ref} from 'vue'
+	import UniCell from '@/components/uni-cell.vue'
+	import {userInfoApi,taskApi} from '@/api/user.js'
+	const userInfo = ref({})
+	const taskInfo = ref({})
+	const getInfo = async ()=>{
+		const infoRes = await userInfoApi()
+		// console.log('infoRes',infoRes);
+		userInfo.value = infoRes.data
+	}
+	const getTask = async ()=>{
+		const res = await taskApi('2023','10')
+		// console.log(res);
+		taskInfo.value = res.data
+	}
+	getInfo()
+	getTask()
+</script>
 
 <style lang="scss">
 	.mine {
-		min-height: 100vh;
+		height: calc(100vh - 50px);
 		background-color: #F4F4F4;
 		.header {
-			width: 750rpx;
-			height: 484rpx;
-			background: #d8d8d8;
-			background-image: linear-gradient(205deg, #f25c4d 2%, #e52d21 100%, #e52d21 100%);
-			border-bottom-left-radius: 20%;
-			border-bottom-right-radius: 20%;
+			width: 100%;
+			height: 584rpx;
+			background-image: url(@/static/images/img-bg.png);
+			background-size: 100%;
+			background-position: 0 -4rpx;
 			overflow: hidden;
 			.avatar{
 				margin: 0 auto;
+				margin-top: 99.92rpx;
 				width: 134.52rpx;
 				height: 132.16rpx;
 				image{
@@ -100,7 +109,7 @@
 		.nav{
 			margin: 0 auto;
 			margin-top: -134rpx;
-			width: 690rpx;
+			width: 92%;
 			height: 268rpx;
 			background: #FFFFFF;
 			border-radius: 16rpx;
@@ -146,7 +155,7 @@
 		}
 		.content{
 			margin: 30rpx auto;
-			width: 690rpx;
+			width: 92%;
 			height: 360rpx;
 			background: #FFFFFF;
 			border-radius: 16rpx;

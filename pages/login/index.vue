@@ -1,24 +1,46 @@
 <template>
-	<view class="content">
-		<view class="text-area">
-			<uni-countdown :day="1" :hour="1" :minute="12" :second="40"></uni-countdown>
-			<uni-countdown :show-day="false" :hour="12" :minute="12" :second="12"></uni-countdown>
-			<button @click="handleTo">{{title}}</button>
-			登录
+	<view class="login-page">
+		<view class="login-type">
+			<view class="title">{{tabMetas[tabIndex].title}}</view>
+			<view class="type">
+				<text @click="handleChangeLoginType">{{tabMetas[tabIndex].subTitle}}</text>
+				<text class="iconfont icon-caret"></text>
+			</view>
 		</view>
+		<!-- 账号密码登录 -->
+		<Account v-if="tabIndex === 0" />
+		<!-- 手机号登录 -->
+		<Mobile v-else />
 	</view>
 </template>
 
 <script setup>
 	import {
-		login
-	} from '@/api/login.js'
-	const title = '登录'
-	const handleTo =async () => {
-		const res = await login({account:'admin',password:'123456'})
-		console.log(res);
+		ref
+	} from 'vue'
+	import Account from './components/account.vue'
+	import Mobile from './components/mobile.vue'
+	
+
+	// 声明索引值
+	const tabIndex = ref(0)
+	// 定义登录类型文本
+	const tabMetas = ref([{
+			title: '账号登录',
+			subTitle: '手机号登录'
+		},
+		{
+			title: '手机号登录',
+			subTitle: '账号登录'
+		}
+	])
+
+	// 切换登录方式
+	const handleChangeLoginType = () => {
+		tabIndex.value = Math.abs(tabIndex.value - 1)
 	}
 </script>
 
-<style>
+<style lang="scss">
+	@import './index.scss'
 </style>

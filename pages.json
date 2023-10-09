@@ -1,4 +1,28 @@
 {
+	"condition": {
+			"current": 2,
+			"list": [{
+					"name": "任务",
+					"path": "pages/test/index",
+					"query": ""
+				},
+				{
+					"name": "消息",
+					"path": "pages/mess/index",
+					"query": ""
+				},
+				{
+					"name": "我的",
+					"path": "pages/mine/index",
+					"query": ""
+				},
+				{
+					"name": "登录",
+					"path": "pages/login/index",
+					"query": ""
+				}
+			]
+		},
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
             "path" : "pages/test/index",
@@ -22,27 +46,56 @@
             "path" : "pages/mine/index",
             "style" :                                                                                    
             {
-							"navigationBarBackgroundColor": "#EF4F3F",
-                "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": false,
-								"disableScroll": true
+							"navigationBarTextStyle": "white",
+							"navigationStyle": "custom",
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
             }
             
         },
 				{
 					"path": "pages/login/index",
 					"style": {
-						"navigationBarTitleText": "登录"
+						"navigationBarTitleText": "神领快递",
+						"enablePullDownRefresh": false
 					}
 				}
     ],
+		"subPackages": [
+			{
+				"root": "subpkg_user",
+				"pages": [
+					{
+						"path": "truck/index",
+						"style": {
+											"navigationBarTitleText": "车辆信息"
+										}
+					},
+					{
+									"path": "test/index",
+									"style": {
+										"navigationBarTitleText": "任务数据"
+									}
+								},
+								{
+									"path": "settings/index",
+									"style": {
+										"navigationBarTitleText": "系统设置"
+									}
+								}
+				]
+			}
+		],
 	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"color": "#818181",
 		"selectedColor": "#EF4F3F",
 		"list": [
 			{
 				"pagePath": "pages/test/index",
 				"text": "任务",
-				"iconPath": "static/tabbar/btn_mess_nor.png",
+				"iconPath": "static/tabbar/btn_test_nor.png",
 				"selectedIconPath": "static/tabbar/btn_test_sel.png"
 			},
 			{
@@ -63,7 +116,8 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "神领物流",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": false
 	},
 	"uniIdRouter": {}
 }
