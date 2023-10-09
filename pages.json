@@ -84,6 +84,17 @@
 									}
 								}
 				]
+			},
+			{
+				"root": "subpkg_mess",
+				"pages": [
+					{
+						"path": "content/index",
+						"style": {
+							"navigationBarTitleText": "详情"
+						}
+					}
+				]
 			}
 		],
 	"tabBar": {
