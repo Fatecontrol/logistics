@@ -95,6 +95,24 @@
 						}
 					}
 				]
+			},
+			{
+				"root": "subpkg_task",
+				"pages": [
+					{
+						"path": "detail/index",
+						"style": {
+							"navigationBarTitleText": "任务详情",
+							"navigationBarBackgroundColor": "#fff"
+						}
+					},
+					{
+						"path": "pickup/index",
+						"style": {
+							"navigationBarTitleText": "详情"
+						}
+					}
+				]
 			}
 		],
 	"tabBar": {

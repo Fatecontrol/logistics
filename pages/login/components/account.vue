@@ -43,7 +43,7 @@
 					errorMessage: '请输入登录账号'
 				},
 				{
-					pattern: /^[a-zA-Z0-9]{5,8}$/,
+					pattern: /^[a-zA-Z0-9]{6,8}$/,
 					errorMessage: '登录账号格式不正确'
 				}
 			]

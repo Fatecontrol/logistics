@@ -8,11 +8,11 @@
 					</text>
 				</view>
 			</view>
-			<view class="message-list" v-show="tabIndex === 0" v-if="tabMetas[0].rendered">
+			<view class="message-list" v-show="tabIndex === 1" v-if="tabMetas[1].rendered">
 				<!-- 任务通知组件 -->
 				<Notify></Notify>
 			</view>
-			<view class="message-list" v-show="tabIndex === 1" v-if="tabMetas[1].rendered">
+			<view class="message-list" v-show="tabIndex === 0" v-if="tabMetas[0].rendered">
 				<!-- 公告组件 -->
 				<Announce></Announce>
 			</view>
@@ -30,11 +30,11 @@
 	const tabIndex = ref(0)
 	// tab数据
 	const tabMetas = ref([{
-			title: '任务通知',
+			title: '公告',
 			rendered: true
 		},
 		{
-			title: '公告',
+			title: '任务通知',
 			rendered: false
 		}
 	])
