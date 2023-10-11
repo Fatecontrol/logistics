@@ -11,7 +11,7 @@
 				</view>
 				<view class="extra">
 					<text class="time">{{item.created}}</text>
-					<navigator hover-class="none" class="link" url="`/subpkg_task/detail/index?id=${notify.id}">查看详情</navigator>
+					<navigator hover-class="none" class="link" :url="`/subpkg_task/detail/index?id=${item.id}`">查看详情</navigator>
 				</view>
 				<template v-slot:title>
 									<view class="title">{{ item.title }} <text class="dot" v-if="showMess" style="left: 41%;"></text></view>

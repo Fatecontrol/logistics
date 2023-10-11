@@ -19,8 +19,14 @@ export const deliverApi = (data) => {
 };
 
 // 任务详情
+export const taskDetailApi = (jobId) => {
+	return uniFetch.get(`/driver/tasks/details/${jobId}`);
+};
 
 // 延迟提货
+export const delayApi = (data) => {
+	return uniFetch.put('/driver/tasks/delay', data);
+};
 
 // 联系调度中心
 

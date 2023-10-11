@@ -27,7 +27,7 @@
 	}
 	const handleSure = ()=>{
 		uni.removeStorageSync('__persisted__user')
-		uni.redirectTo({
+		uni.reLaunch({
 			url:'/pages/login/index'
 		})
 	}
